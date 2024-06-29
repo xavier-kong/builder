@@ -1,5 +1,4 @@
 import { z } from "zod";
-import getStreakData from '../services/streaks';
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
@@ -9,15 +8,6 @@ let post = {
 };
 
 export const postRouter = createTRPCRouter({
-  getStreakData: publicProcedure
-  .input(z.object({ username: z.string() }))
-  .query(async ({ input }) => {
-    const username = input.username;
-    const streakData = await getStreakData(username);
-
-    return streakData;
-  }),
-
   hello: publicProcedure
   .input(z.object({ text: z.string() }))
   .query(({ input }) => {
