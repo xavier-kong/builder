@@ -24,10 +24,21 @@ export default function Streaks() {
     return (
         <div className="bg-slate-950 h-screen flex flex-1 justify-center items-center text-white">
             <div className="h-1/2 w-1/2 flex flex-col">
-                <div className="flex-1 flex justify-center items-end border-white border-2">
-                    {years} years {months} months {days} days
+                <div className="flex-1 flex justify-center items-center border-white border-2 flex-row">
+                    <div className="px-2 flex-row flex gap-2 items-end align-text-bottom">
+                        <p className="text-7xl bg-red-400 flex flex-1">{years}</p>
+                        <p className="bg-blue-900">years</p>
+                    </div>
+                    <div className="px-2 flex-row flex gap-2 items-end">
+                        <p className="text-3xl">{months}</p>
+                        <p>months</p>
+                    </div>
+                    <div className="px-2 flex-row flex gap-2 items-end">
+                        <p className="text-3xl">{days}</p>
+                        <p>days</p>
+                    </div>
                 </div>
-                <div>
+                <div className="h-20 mt-5 border-2 border-white flex items-center justify-center">
                     {totalDays} days since June 27th 2021
                 </div>
                 <div>
