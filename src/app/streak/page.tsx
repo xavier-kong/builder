@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Vortex } from "../_components/vortext";
 
 function getStats(): { years: number, months: number, days: number, totalDays: number } {
     const startDate = new Date('2021-06-27');
@@ -18,36 +19,37 @@ function getStats(): { years: number, months: number, days: number, totalDays: n
     return { years, months, days, totalDays };
 }
 
+
+
 export default function Streaks() {
     const { years, months, days, totalDays } = getStats();
 
     return (
-        <div className="bg-slate-950 h-screen flex flex-1 justify-center items-center text-white">
-            <div className="h-1/2 w-1/2 flex flex-col">
-                <div className="flex-1 flex justify-center items-center border-white border-2 flex-row">
-                    <div className="px-2 flex-row flex gap-2 items-end align-text-bottom">
-                        <p className="text-7xl bg-red-400 flex flex-1">{years}</p>
-                        <p className="bg-blue-900">years</p>
-                    </div>
-                    <div className="px-2 flex-row flex gap-2 items-end">
-                        <p className="text-3xl">{months}</p>
-                        <p>months</p>
-                    </div>
-                    <div className="px-2 flex-row flex gap-2 items-end">
-                        <p className="text-3xl">{days}</p>
-                        <p>days</p>
-                    </div>
-                </div>
-                <div className="h-20 mt-5 border-2 border-white flex items-center justify-center">
+        <div className="w-[calc(100%)] mx-auto h-screen overflow-hidden">
+            <Vortex
+                backgroundColor="black"
+                rangeY={800}
+                particleCount={500}
+                baseHue={120}
+                className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full"
+            >
+                <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
+                    {years} years {months} months {days} days
+                </h2>
+                <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
                     {totalDays} days since June 27th 2021
+                </p>
+                <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+                    <Link href="https://github.com/xavier-kong" target="_blank">
+                        <button className="p-[3px] relative">
+                            <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg" />
+                            <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                                <p>Click for my Github profile</p>
+                            </div>
+                        </button>
+                    </Link>
                 </div>
-                <div>
-                    <Link href="https://github.com/xavier-kong">My github profile</Link>
-                </div>
-                <div>
-                    Home button
-                </div>
-            </div>
+            </Vortex>
         </div>
-    )
+    );
 }
