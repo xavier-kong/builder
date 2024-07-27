@@ -36,14 +36,14 @@ export default function Streaks() {
                 <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
                     {years} years {months} months {days} days
                 </h2>
-                <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
+                <p className="text-white text-sm md:text-2xl max-w-xl mt-10 text-center">
                     {totalDays} days since June 27th 2021
                 </p>
-                <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+                <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
                     <Link href="https://github.com/xavier-kong" target="_blank">
                         <button className="p-[3px] relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg" />
-                            <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                            <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent flex flex-row">
                                 <p>Click for my Github profile</p>
                             </div>
                         </button>
