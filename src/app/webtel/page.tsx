@@ -16,7 +16,7 @@ export default function Home() {
                     <QRCode 
                         value={`${res.data?.uuid}`} 
                         eyeRadius={10} 
-                        style={{ borderRadius: 20, height: '100%', width: '100%' }} 
+                        style={{ borderRadius: 20, height: '100%', width: 'auto' }} 
                         logoImage="https://w7.pngwing.com/pngs/673/14/png-transparent-circle-messenger-round-icon-telegram-popular-services-brands-vol-2-icon.png"
                         removeQrCodeBehindLogo
                         logoPadding={1}
@@ -26,6 +26,14 @@ export default function Home() {
                     />
                 </div>
                 <div className="h-14 w-full bg-red-800">Scan the QR code above</div>
+                <div className="flex flex-col gap-1">
+                    <div className="flex flex-row">
+                        <div>1</div>
+                        <div>
+                            <p>Text</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
