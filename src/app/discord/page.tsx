@@ -2,16 +2,16 @@ import Image from "next/image";
 
 function Header() {
     return (
-        <div className="flex flex-row h-12 bg-red-400 justify-center">
-            <div className="w-14 items-center justify-center mr-20">
+        <div className="flex flex-row h-12 justify-center mx-10">
+            <div className="w-36 items-center justify-center">
                 <Image 
                     alt=""
                     src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6257d23c5fb25be7e0b6e220_Open%20Source%20Projects%20_%20Discord-7.svg"
-                    width="1000"
-                    height="1000"
+                    width="900"
+                    height="900"
                 />
             </div>
-            <div className="flex w-1/2 flex-row px-5 items-center mx-10 bg-green-200">
+            <div className="flex flex-1 flex-row items-center text-white text-xs">
                 {
                     ['download', 'nitro', 'discord', 'safety', 'support', 'blog', 'careers'].map((item) => (
                         <div key={item} className="flex-1">
@@ -20,8 +20,8 @@ function Header() {
                     ))
                 }
             </div>
-            <div className="w-36 flex items-center justify-center px-10 ml-20">
-                <div className="bg-white rounded-3xl flex flex-1 items-center justify-center h-8">
+            <div className="w-36 flex items-center justify-center px-10">
+                <div className="bg-white rounded-3xl flex flex-1 items-center justify-center h-8 text-xs">
                     <p>Login</p>
                 </div>
             </div>
