@@ -34,12 +34,12 @@ function Header() {
 function Hero() {
     return (
         <div className="flex flex-row mt-20">
-            <div className="flex flex-col flex-1">
-                <div>
-                    <p>GROUP CHAT THAT’S ALL FUN & GAMES</p>
+            <div className="flex flex-col flex-1 ml-20 mt-20">
+                <div className="flex flex-1 bg-green-500 pl-20">
+                    <p className="text-5xl font-bold text-white">GROUP CHAT THAT’S ALL FUN & GAMES</p>
                 </div>
-                <div>
-                    <p>
+                <div className="flex flex-1 bg-red-500 pl-20">
+                    <p className="text-l">
                         Discord is great for playing games and chilling with friends, or even building a worldwide community. Customize your own space to talk, play, and hang out.
                     </p>
                 </div>
