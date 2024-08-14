@@ -13,14 +13,16 @@ function Header() {
                     />
                 </div>
             </div>
-            <div className="flex flex-1 flex-row items-center text-white text-xs px-16">
-                {
-                    ['download', 'nitro', 'discord', 'safety', 'support', 'blog', 'careers'].map((item) => (
-                        <div key={item} className="flex-1">
-                            <p className="capitalize">{item}</p>
-                        </div>
-                    ))
-                }
+            <div className="flex flex-1 flex-row px-16 items-center justify-center">
+                <div className="flex flex-row justify-center items-center gap-10">
+                    {
+                        ['download', 'nitro', 'discord', 'safety', 'support', 'blog', 'careers'].map((item) => (
+                            <div key={item} className="text-xs text-white">
+                                <p className="capitalize">{item}</p>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
             <div className="w-36 flex items-center justify-center px-10">
                 <div className="bg-white rounded-3xl flex flex-1 items-center justify-center h-8 text-xs">
